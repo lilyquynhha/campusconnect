@@ -93,7 +93,10 @@ function main(): void {
         });
 
         client.publish(topic, payload);
+
+        console.log(sensor);
       }
+      console.log("\n");
     }, SENSOR_INTERVAL_MS);
   });
 
