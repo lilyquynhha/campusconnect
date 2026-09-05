@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "sensors": "tsx sensor-simulator.ts"
+    "start": "tsx sensor-simulator.ts",
+    "start-medium": "tsx --env-file=.env.medium sensor-simulator.ts",
+    "start-large": "tsx --env-file=.env.large sensor-simulator.ts"
   },
   "dependencies": {
     "mqtt": "^5.10.1"

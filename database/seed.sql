@@ -1,5 +1,4 @@
--- Auto-generated from spaces.json — do not hand-edit; regenerate instead
--- to keep the sensor simulator and the database in sync.
+-- DO NOT HAND EDIT to keep in sync with spaces.json
 INSERT INTO
     spaces (
         id,
