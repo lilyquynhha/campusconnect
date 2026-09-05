@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "A-1-01",
+    "building": "A",
+    "level": 1,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": false,
+    "has_tv": true
+  },
+  {
+    "id": "A-1-02",
+    "building": "A",
+    "level": 1,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-1-03",
+    "building": "A",
+    "level": 1,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-1-04",
+    "building": "A",
+    "level": 1,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-1-05",
+    "building": "A",
+    "level": 1,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "A-1-06",
+    "building": "A",
+    "level": 1,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "A-1-07",
+    "building": "A",
+    "level": 1,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-1-08",
+    "building": "A",
+    "level": 1,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-1-09",
+    "building": "A",
+    "level": 1,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "A-1-10",
+    "building": "A",
+    "level": 1,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-2-01",
+    "building": "A",
+    "level": 2,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "A-2-02",
+    "building": "A",
+    "level": 2,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-2-03",
+    "building": "A",
+    "level": 2,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "A-2-04",
+    "building": "A",
+    "level": 2,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-2-05",
+    "building": "A",
+    "level": 2,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-2-06",
+    "building": "A",
+    "level": 2,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "A-2-07",
+    "building": "A",
+    "level": 2,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "A-2-08",
+    "building": "A",
+    "level": 2,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-2-09",
+    "building": "A",
+    "level": 2,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "A-2-10",
+    "building": "A",
+    "level": 2,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-1-01",
+    "building": "B",
+    "level": 1,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": false,
+    "has_tv": true
+  },
+  {
+    "id": "B-1-02",
+    "building": "B",
+    "level": 1,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-1-03",
+    "building": "B",
+    "level": 1,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-1-04",
+    "building": "B",
+    "level": 1,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-1-05",
+    "building": "B",
+    "level": 1,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "B-1-06",
+    "building": "B",
+    "level": 1,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "B-1-07",
+    "building": "B",
+    "level": 1,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-1-08",
+    "building": "B",
+    "level": 1,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-1-09",
+    "building": "B",
+    "level": 1,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "B-1-10",
+    "building": "B",
+    "level": 1,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-2-01",
+    "building": "B",
+    "level": 2,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "B-2-02",
+    "building": "B",
+    "level": 2,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-2-03",
+    "building": "B",
+    "level": 2,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "B-2-04",
+    "building": "B",
+    "level": 2,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-2-05",
+    "building": "B",
+    "level": 2,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-2-06",
+    "building": "B",
+    "level": 2,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "B-2-07",
+    "building": "B",
+    "level": 2,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "B-2-08",
+    "building": "B",
+    "level": 2,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-2-09",
+    "building": "B",
+    "level": 2,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "B-2-10",
+    "building": "B",
+    "level": 2,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-1-01",
+    "building": "C",
+    "level": 1,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": false,
+    "has_tv": true
+  },
+  {
+    "id": "C-1-02",
+    "building": "C",
+    "level": 1,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-1-03",
+    "building": "C",
+    "level": 1,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-1-04",
+    "building": "C",
+    "level": 1,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-1-05",
+    "building": "C",
+    "level": 1,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "C-1-06",
+    "building": "C",
+    "level": 1,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "C-1-07",
+    "building": "C",
+    "level": 1,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-1-08",
+    "building": "C",
+    "level": 1,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-1-09",
+    "building": "C",
+    "level": 1,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "C-1-10",
+    "building": "C",
+    "level": 1,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-2-01",
+    "building": "C",
+    "level": 2,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "C-2-02",
+    "building": "C",
+    "level": 2,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-2-03",
+    "building": "C",
+    "level": 2,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "C-2-04",
+    "building": "C",
+    "level": 2,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-2-05",
+    "building": "C",
+    "level": 2,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-2-06",
+    "building": "C",
+    "level": 2,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "C-2-07",
+    "building": "C",
+    "level": 2,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "C-2-08",
+    "building": "C",
+    "level": 2,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-2-09",
+    "building": "C",
+    "level": 2,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "C-2-10",
+    "building": "C",
+    "level": 2,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-1-01",
+    "building": "D",
+    "level": 1,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": false,
+    "has_tv": true
+  },
+  {
+    "id": "D-1-02",
+    "building": "D",
+    "level": 1,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-1-03",
+    "building": "D",
+    "level": 1,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-1-04",
+    "building": "D",
+    "level": 1,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-1-05",
+    "building": "D",
+    "level": 1,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "D-1-06",
+    "building": "D",
+    "level": 1,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "D-1-07",
+    "building": "D",
+    "level": 1,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-1-08",
+    "building": "D",
+    "level": 1,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-1-09",
+    "building": "D",
+    "level": 1,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "D-1-10",
+    "building": "D",
+    "level": 1,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-2-01",
+    "building": "D",
+    "level": 2,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "D-2-02",
+    "building": "D",
+    "level": 2,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-2-03",
+    "building": "D",
+    "level": 2,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "D-2-04",
+    "building": "D",
+    "level": 2,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-2-05",
+    "building": "D",
+    "level": 2,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-2-06",
+    "building": "D",
+    "level": 2,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "D-2-07",
+    "building": "D",
+    "level": 2,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "D-2-08",
+    "building": "D",
+    "level": 2,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-2-09",
+    "building": "D",
+    "level": 2,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "D-2-10",
+    "building": "D",
+    "level": 2,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-1-01",
+    "building": "E",
+    "level": 1,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": false,
+    "has_tv": true
+  },
+  {
+    "id": "E-1-02",
+    "building": "E",
+    "level": 1,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-1-03",
+    "building": "E",
+    "level": 1,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-1-04",
+    "building": "E",
+    "level": 1,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-1-05",
+    "building": "E",
+    "level": 1,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "E-1-06",
+    "building": "E",
+    "level": 1,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "E-1-07",
+    "building": "E",
+    "level": 1,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-1-08",
+    "building": "E",
+    "level": 1,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-1-09",
+    "building": "E",
+    "level": 1,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "E-1-10",
+    "building": "E",
+    "level": 1,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-2-01",
+    "building": "E",
+    "level": 2,
+    "room": 1,
+    "quiet_zone": true,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "E-2-02",
+    "building": "E",
+    "level": 2,
+    "room": 2,
+    "quiet_zone": false,
+    "capacity": 2,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-2-03",
+    "building": "E",
+    "level": 2,
+    "room": 3,
+    "quiet_zone": true,
+    "capacity": 3,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "E-2-04",
+    "building": "E",
+    "level": 2,
+    "room": 4,
+    "quiet_zone": false,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-2-05",
+    "building": "E",
+    "level": 2,
+    "room": 5,
+    "quiet_zone": true,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-2-06",
+    "building": "E",
+    "level": 2,
+    "room": 6,
+    "quiet_zone": false,
+    "capacity": 1,
+    "has_power_outlets": true,
+    "has_tv": true
+  },
+  {
+    "id": "E-2-07",
+    "building": "E",
+    "level": 2,
+    "room": 7,
+    "quiet_zone": true,
+    "capacity": 2,
+    "has_power_outlets": false,
+    "has_tv": false
+  },
+  {
+    "id": "E-2-08",
+    "building": "E",
+    "level": 2,
+    "room": 8,
+    "quiet_zone": false,
+    "capacity": 3,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-2-09",
+    "building": "E",
+    "level": 2,
+    "room": 9,
+    "quiet_zone": true,
+    "capacity": 4,
+    "has_power_outlets": true,
+    "has_tv": false
+  },
+  {
+    "id": "E-2-10",
+    "building": "E",
+    "level": 2,
+    "room": 10,
+    "quiet_zone": false,
+    "capacity": 5,
+    "has_power_outlets": true,
+    "has_tv": false
+  }
+]
