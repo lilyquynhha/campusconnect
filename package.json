@@ -8,15 +8,16 @@
     "api": "tsx booking-api.ts"
   },
   "dependencies": {
-    "mqtt": "^5.10.1",
+    "dotenv": "^18.0.1",
     "express": "^4.21.1",
+    "mqtt": "^5.10.1",
     "pg": "^8.13.1"
   },
   "devDependencies": {
-    "tsx": "^4.19.0",
-    "typescript": "^5.6.0",
-    "@types/node": "^22.0.0",
     "@types/express": "^4.17.21",
-    "@types/pg": "^8.11.10"
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
   }
 }
