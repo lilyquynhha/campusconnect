@@ -1,18 +1,22 @@
 {
-  "name": "campusconnect-naive-sensors",
+  "name": "campusconnect-naive",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "tsx sensor-simulator.ts",
-    "start-medium": "tsx --env-file=.env.medium sensor-simulator.ts",
-    "start-large": "tsx --env-file=.env.large sensor-simulator.ts"
+    "sensors": "tsx sensor-simulator.ts",
+    "lights": "tsx light-actuator.ts",
+    "api": "tsx booking-api.ts"
   },
   "dependencies": {
-    "mqtt": "^5.10.1"
+    "mqtt": "^5.10.1",
+    "express": "^4.21.1",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
     "tsx": "^4.19.0",
     "typescript": "^5.6.0",
-    "@types/node": "^22.0.0"
+    "@types/node": "^22.0.0",
+    "@types/express": "^4.17.21",
+    "@types/pg": "^8.11.10"
   }
 }
