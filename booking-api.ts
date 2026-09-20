@@ -59,6 +59,17 @@ mqttClient.on("error", (err: Error) =>
 const MIN_DURATION_HOURS = 1;
 const MAX_DURATION_HOURS = 5;
 const MAX_ADVANCE_DAYS = 5;
+const GRACE_PERIOD_MINUTES = 15;
+
+// Phase 6: naive lifecycle resolution — polling, not event-driven.
+// STALENESS_THRESHOLD_SECONDS matches the same 30s/6-missed-readings rule
+// Node-RED's debounce logic uses, so a stale occupancy reading never
+// incorrectly promotes a booking to 'active'.
+const LIFECYCLE_POLL_INTERVAL_MS = parseInt(
+  process.env.LIFECYCLE_POLL_INTERVAL_MS || "60000",
+  10,
+);
+const STALENESS_THRESHOLD_SECONDS = 30;
 
 interface CreateBookingBody {
   student_id?: string;
@@ -196,11 +207,9 @@ app.post("/bookings", async (req: Request, res: Response) => {
     req.body as CreateBookingBody;
 
   if (!student_id || !space_id || !start_time || !end_time) {
-    return res
-      .status(400)
-      .json({
-        error: "student_id, space_id, start_time, and end_time are required",
-      });
+    return res.status(400).json({
+      error: "student_id, space_id, start_time, and end_time are required",
+    });
   }
 
   const startDate = new Date(start_time);
@@ -220,11 +229,9 @@ app.post("/bookings", async (req: Request, res: Response) => {
     durationHours < MIN_DURATION_HOURS ||
     durationHours > MAX_DURATION_HOURS
   ) {
-    return res
-      .status(400)
-      .json({
-        error: `Booking duration must be between ${MIN_DURATION_HOURS} and ${MAX_DURATION_HOURS} hours`,
-      });
+    return res.status(400).json({
+      error: `Booking duration must be between ${MIN_DURATION_HOURS} and ${MAX_DURATION_HOURS} hours`,
+    });
   }
 
   const now = new Date();
@@ -232,11 +239,9 @@ app.post("/bookings", async (req: Request, res: Response) => {
     now.getTime() + MAX_ADVANCE_DAYS * 24 * 60 * 60 * 1000,
   );
   if (startDate < now || startDate > maxAdvance) {
-    return res
-      .status(400)
-      .json({
-        error: `start_time must be within the next ${MAX_ADVANCE_DAYS} days`,
-      });
+    return res.status(400).json({
+      error: `start_time must be within the next ${MAX_ADVANCE_DAYS} days`,
+    });
   }
 
   try {
@@ -292,7 +297,7 @@ app.post("/bookings", async (req: Request, res: Response) => {
     // --- Downstream side-effects: inline, synchronous, in this order ---
     await sendConfirmationEmailStub(student_id, space, start_time);
     await updateUtilizationStats(space, startDate, durationHours);
-    publishDoorDisplay(space_id, "Booked");
+    publishDoorDisplay(space_id, `${space_id} booked.`);
 
     res.status(200).json({ booking, space });
   } catch (err) {
@@ -306,3 +311,79 @@ app.listen(PORT, () => {
     `Naive Booking API listening on port ${PORT} (single instance, no clustering)`,
   );
 });
+
+// ---- Phase 6: lifecycle resolution (naive: polling loop, not
+// DynamoDB Streams + EventBridge Scheduler) ----
+// Runs inside this same always-on process, on the same connection pool and
+// instance as booking traffic and Node-RED's writes — this is the "full-table
+// scan pattern competing for shared resources" bottleneck the naive baseline
+// is built to demonstrate. Deliberately no index on bookings.status or
+// space_status.current_status, so these queries really do scan.
+async function runLifecycleResolution(): Promise<void> {
+  try {
+    // Step 1: promote confirmed -> active for spaces currently occupied
+    // (per Node-RED's debounced space_status), only trusting that signal
+    // if it's fresh, and only within the booking's own time window.
+    const promoted = await pool.query(
+      `UPDATE bookings b
+       SET status = 'active'
+       FROM space_status ss
+       WHERE b.space_id = ss.space_id
+         AND b.status = 'confirmed'
+         AND ss.current_status = 'occupied'
+         AND ss.last_seen_at > NOW() - INTERVAL '${STALENESS_THRESHOLD_SECONDS} seconds'
+         AND NOW() BETWEEN b.start_time AND b.end_time
+       RETURNING b.id, b.space_id`,
+    );
+
+    // Step 2: release no-shows — confirmed bookings past the grace period
+    // that never got promoted to active above. Joins spaces for
+    // building/level so the no-show can be logged to utilization_stats.
+    const released = await pool.query(
+      `UPDATE bookings b
+       SET status = 'released'
+       FROM spaces s
+       WHERE b.space_id = s.id
+         AND b.status = 'confirmed'
+         AND NOW() > b.start_time + INTERVAL '${GRACE_PERIOD_MINUTES} minutes'
+       RETURNING b.id, b.space_id, b.start_time, s.building, s.level`,
+    );
+
+    for (const row of released.rows) {
+      const day = new Date(row.start_time).toISOString().slice(0, 10);
+      await pool.query(
+        `INSERT INTO utilization_stats (building, level, day, total_no_shows)
+         VALUES ($1, $2, $3, 1)
+         ON CONFLICT (building, level, day) DO UPDATE SET
+           total_no_shows = utilization_stats.total_no_shows + 1`,
+        [row.building, row.level, day],
+      );
+      publishDoorDisplay(row.space_id, "Available");
+    }
+
+    // Step 3: end active bookings whose window has passed.
+    const ended = await pool.query(
+      `UPDATE bookings
+       SET status = 'ended'
+       WHERE status = 'active'
+         AND NOW() > end_time
+       RETURNING id, space_id`,
+    );
+
+    for (const row of ended.rows) {
+      publishDoorDisplay(row.space_id, `${row.space_id} available`);
+    }
+
+    if (promoted.rowCount || released.rowCount || ended.rowCount) {
+      console.log(
+        `[lifecycle] promoted(active)=${promoted.rowCount} released(no-show)=${released.rowCount} ended=${ended.rowCount}`,
+      );
+    }
+  } catch (err) {
+    console.error("Lifecycle resolution poll failed:", err);
+  }
+}
+
+// Run once at startup (fast feedback while testing) then on the interval.
+runLifecycleResolution();
+setInterval(runLifecycleResolution, LIFECYCLE_POLL_INTERVAL_MS);
