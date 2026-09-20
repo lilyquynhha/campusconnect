@@ -4,6 +4,7 @@ import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import mqtt from "mqtt";
+import "dotenv/config";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
