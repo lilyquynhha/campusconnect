@@ -45,6 +45,9 @@ const pool = new Pool({
   user: process.env.PGUSER || "postgres",
   password: process.env.PGPASSWORD || "postgres",
   max: 15,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 // Single shared MQTT connection for the door-display publish — created once
@@ -320,6 +323,7 @@ app.listen(PORT, () => {
 // is built to demonstrate. Deliberately no index on bookings.status or
 // space_status.current_status, so these queries really do scan.
 async function runLifecycleResolution(): Promise<void> {
+  console.log("Running booking lifecycle resolution...")
   try {
     // Step 1: promote confirmed -> active for spaces currently occupied
     // (per Node-RED's debounced space_status), only trusting that signal
