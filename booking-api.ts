@@ -323,7 +323,7 @@ app.listen(PORT, () => {
 // is built to demonstrate. Deliberately no index on bookings.status or
 // space_status.current_status, so these queries really do scan.
 async function runLifecycleResolution(): Promise<void> {
-  console.log("Running booking lifecycle resolution...")
+  console.log("Running booking lifecycle resolution...");
   try {
     // Step 1: promote confirmed -> active for spaces currently occupied
     // (per Node-RED's debounced space_status), only trusting that signal
@@ -362,7 +362,7 @@ async function runLifecycleResolution(): Promise<void> {
            total_no_shows = utilization_stats.total_no_shows + 1`,
         [row.building, row.level, day],
       );
-      publishDoorDisplay(row.space_id, "Available");
+      publishDoorDisplay(row.space_id, `${row.space_id} available`);
     }
 
     // Step 3: end active bookings whose window has passed.
