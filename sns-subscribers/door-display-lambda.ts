@@ -27,6 +27,7 @@ function displayMessageFor(eventType: string, spaceId: string): string {
     case "booking-not-honoured":
     case "booking-honoured":
     case "booking-cancelled":
+    case "booking-ended":
       return `${spaceId} available`;
     default:
       return `${spaceId} status unknown`;
